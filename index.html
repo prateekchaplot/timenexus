@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Nexus</title>
+    <link rel="stylesheet" href="./packages/bootstrap.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Time Nexus</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                >Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-sm-2"
+              type="search"
+              placeholder="Search"
+            />
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--  -->
+    <div class="row mx-auto mt-5">
+      <form id="form-input">
+        <div class="form-group row justify-content-center">
+          <!--  -->
+          <label class="col-form-label col-1 text-center" for="datetime-input"
+            >Date Time</label
+          >
+
+          <div class="col-2">
+            <input
+              type="text"
+              class="form-control"
+              id="datetime-input"
+              value="2023-07-27T22:50:10.1524573"
+            />
+          </div>
+
+          <!--  -->
+          <label
+            for="timezone-dropdown"
+            class="col-form-label col-1 text-center"
+            >Time Zone</label
+          >
+          <div class="col-1">
+            <select class="form-select" id="timezone-dropdown">
+              <option value="UTC" selected>UTC</option>
+              <option value="IST">IST</option>
+              <option value="PST">PST</option>
+              <option value="EST">EST</option>
+            </select>
+          </div>
+
+          <!--  -->
+          <label class="col-form-label col-1 text-center" for="dateFormat-input"
+            >Format</label
+          >
+          <div class="col-1">
+            <input
+              type="text"
+              class="form-control"
+              id="dateFormat-input"
+              value="YYYY/MM/DD"
+            />
+          </div>
+
+          <!--  -->
+          <label class="col-form-label col-1 text-center" for="timeFormat-input"
+            >Format</label
+          >
+          <div class="col-1">
+            <input
+              type="text"
+              class="form-control"
+              id="timeFormat-input"
+              value="HH:mm:ss"
+            />
+          </div>
+
+          <!--  -->
+          <div class="col-1 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!--  -->
+    <div class="row mt-5 mx-5 justify-content-center">
+      <table class="table table-hover d-none" id="timezone-tbl">
+        <thead>
+          <tr>
+            <th scope="col">Time zone</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Day</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="./packages/moment.min.js"></script>
+    <script src="./packages/moment-timezone.js"></script>
+    <script src="./packages/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
